@@ -1,0 +1,33 @@
+{
+  "name": "pi-context-observe",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "prepare": "lefthook install",
+    "format:check": "oxfmt --check src",
+    "lint": "oxlint --config .oxlintrc.json src",
+    "verify": "pnpm format:check && pnpm lint"
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
+    "@oxlint/plugins": "1.87.0",
+    "lefthook": "2.2.2",
+    "oxfmt": "0.72.0",
+    "oxlint": "1.87.0"
+  },
+  "packageManager": "pnpm@10.10.0",
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  }
+}
